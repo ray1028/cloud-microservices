@@ -1,10 +1,10 @@
-version: '3'
+version: "3"
 services:
   auth-service:
     restart: unless-stopped
-    build: '.'
-    working_dir: '/var/www/auth-server/'
-    command: 'npm run server'
+    build: "."
+    working_dir: "/var/www/auth-server/"
+    command: "npm run server"
     tty: true
     ports:
       - "443:443"
@@ -13,4 +13,4 @@ services:
 networks:
   default:
     external:
-      name: 'api-network'
+      name: api_network
